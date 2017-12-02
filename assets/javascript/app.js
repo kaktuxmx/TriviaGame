@@ -53,7 +53,7 @@ scorenoanswer = 0;
 
     function gamestart() {
         //Question 1 logic Q1A1
-        if (varq1a1 === 1 && varq1a2 ===0 && varq1a3 === 0) {
+        if (varq1a1 === 1 && varq1a2 === 0 && varq1a3 === 0) {
               scorewin++;
         } else if(varq1a1 === 0 && varq1a2 ===1 || varq1a3 === 1) {
               scoreloose++;
@@ -88,10 +88,10 @@ scorenoanswer = 0;
               scoreloose++;
         } else if (varq5a1 === varq5a2 === carq5a3) {
               scorenoanswer++;
-        };
+        }
       }
 
 
-    }
+
 
 });
