@@ -14,6 +14,7 @@ var varq4a3;
 var varq5a1;
 var varq5a2;
 var varq5a3;
+var endbutton;
 
 scorewinques = 0;
 scorelooseques = 0;
@@ -39,20 +40,22 @@ scorenoanswer = 0;
     $("#q5a1").attr("answerq5", varq5a1);
     $("#q5a2").attr("answerq5", varq5a2);
     $("#q5a3").attr("answerq5", varq5a3);
+    $("#donebutton").attr("endbutton",endbutton);
 
-// Click event for the variables
+//Click event for the ratio buttons
     $(".radio-inline").click(function(){
       console.log(this);
     })
 
     $("#donebutton").click(function(){
+      console.log(endbutton);
         gamestart();
-                // I NEED TO PUT THE NEW SCREEN WITH THE HTML SHOWING SCORE
+
     })
 // Q1A1, Q2A2, Q3A1, Q4A3, Q5A3 are the correct answers...
 
     function gamestart() {
-        //Question 1 logic Q1A1
+            //Question 1 logic Q1A1
         if (varq1a1 === 1 && varq1a2 === 0 && varq1a3 === 0) {
               scorewin++;
         } else if(varq1a1 === 0 && varq1a2 ===1 || varq1a3 === 1) {
@@ -86,12 +89,15 @@ scorenoanswer = 0;
               scorewin++;
         } else if (varq5a3 === 0 && varq5a1 === 1 || varq5a2 === 1) {
               scoreloose++;
-        } else if (varq5a1 === varq5a2 === carq5a3) {
+        } else if (varq5a1 === varq5a2 === varq5a3) {
               scorenoanswer++;
+              gamefinish();
         }
       }
 
-
-
-
+        function gamefinish() {
+          $("#scores").html("Your Correct answers are: " + scorewin);
+          $("#scores").html("Your incorrect answers are: " + scoreloose);
+          $("#scores").html("Your unanswered are: " + scorenoanswer);
+        }
 });
