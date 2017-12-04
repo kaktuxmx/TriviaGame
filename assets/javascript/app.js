@@ -1,57 +1,53 @@
 $(document).ready(function(){
-var varq1a1;
-var varq1a2;
-var varq1a3;
-var varq2a1;
-var varq2a2;
-var varq2a3;
-var varq3a1;
-var varq3a2;
-var varq3a3;
-var varq4a1;
-var varq4a2;
-var varq4a3;
-var varq5a1;
-var varq5a2;
-var varq5a3;
-var endbutton;
+  var varq1a1;
+  var varq1a2;
+  var varq1a3;
+  var varq2a1;
+  var varq2a2;
+  var varq2a3;
+  var varq3a1;
+  var varq3a2;
+  var varq3a3;
+  var varq4a1;
+  var varq4a2;
+  var varq4a3;
+  var varq5a1;
+  var varq5a2;
+  var varq5a3;
 
-scorewinques = 0;
-scorelooseques = 0;
-scorenoanswer = 0;
+  scorewinques = 0;
+  scorelooseques = 0;
+  scorenoanswer = 0;
 
-// Q1A1, Q2A2, Q3A1, Q4A3, Q5A3 are the correct answers...
+  // Q1A1, Q2A2, Q3A1, Q4A3, Q5A3 are the correct answers...
 
+  //Click event for the ratio buttons
+  $(".radio-inline").click(function(){
+      varq1a1 = $("#q1a1").val();
+      varq1a2 = $("#q1a2").val();
+      varq1a3 = $("#q1a3").val();
 
-// Creating the Listening events for Questions
+      varq2a1 = $("#q2a1").val();
+      varq2a2 = $("#q2a2").val();
+      varq2a3 = $("#q2a3").val();
 
-    $("#q1a1").attr("answerq1", varq1a1);
-    $("#q1a2").attr("answerq1", varq1a2);
-    $("#q1a3").attr("answerq1", varq1a3);
-    $("#q2a1").attr("answerq2", varq2a1);
-    $("#q2a2").attr("answerq2", varq2a2);
-    $("#q2a3").attr("answerq2", varq2a3);
-    $("#q3a1").attr("answerq3", varq3a1);
-    $("#q3a2").attr("answerq3", varq3a2);
-    $("#q3a3").attr("answerq3", varq3a3);
-    $("#q4a1").attr("answerq4", varq4a1);
-    $("#q4a2").attr("answerq4", varq4a2);
-    $("#q4a3").attr("answerq4", varq4a3);
-    $("#q5a1").attr("answerq5", varq5a1);
-    $("#q5a2").attr("answerq5", varq5a2);
-    $("#q5a3").attr("answerq5", varq5a3);
-    $("#donebutton").attr("endbutton",endbutton);
+      varq3a1 = $("#q3a1").val();
+      varq3a2 = $("#q3a2").val();
+      varq3a3 = $("#q3a3").val();
 
-//Click event for the ratio buttons
-    $(".radio-inline").click(function(){
-      console.log(this);
-    })
+      varq4a1 = $("#q4a1").val();
+      varq4a2 = $("#q4a2").val();
+      varq4a3 = $("#q4a3").val();
 
-    $("#donebutton").click(function(){
-      console.log(endbutton);
-        gamestart();
+      varq5a1 = $("#q5a1").val();
+      varq5a2 = $("#q5a2").val();
+      varq5a3 = $("#q5a3").val();
+    });
 
-    })
+  $("#donebutton").click(function(){
+      gamestart();
+
+  });
 // Q1A1, Q2A2, Q3A1, Q4A3, Q5A3 are the correct answers...
 
     function gamestart() {
