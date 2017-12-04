@@ -19,33 +19,11 @@ $(document).ready(function(){
   scorelooseques = 0;
   scorenoanswer = 0;
 
-  // Q1A1, Q2A2, Q3A1, Q4A3, Q5A3 are the correct answers...
 
-  //Click event for the ratio buttons
-  $(".radio-inline").click(function(){
-      varq1a1 = $("#q1a1").val();
-      varq1a2 = $("#q1a2").val();
-      varq1a3 = $("#q1a3").val();
 
-      varq2a1 = $("#q2a1").val();
-      varq2a2 = $("#q2a2").val();
-      varq2a3 = $("#q2a3").val();
-
-      varq3a1 = $("#q3a1").val();
-      varq3a2 = $("#q3a2").val();
-      varq3a3 = $("#q3a3").val();
-
-      varq4a1 = $("#q4a1").val();
-      varq4a2 = $("#q4a2").val();
-      varq4a3 = $("#q4a3").val();
-
-      varq5a1 = $("#q5a1").val();
-      varq5a2 = $("#q5a2").val();
-      varq5a3 = $("#q5a3").val();
-    });
 
   $("#donebutton").click(function(){
-      gamestart();
+    gamestart();
 
   });
 // Q1A1, Q2A2, Q3A1, Q4A3, Q5A3 are the correct answers...
